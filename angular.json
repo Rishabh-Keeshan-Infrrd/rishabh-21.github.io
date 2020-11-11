@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "tyro"
+    }
+  },
+  "defaultProject": "tyro",
+  "cli": {
+    "analytics": "d22197ec-390d-4057-aa6b-a9b3b42ddf75"
+  }
 }
