@@ -9,6 +9,7 @@
   height: 35px;
   padding-left: 15px;
   margin-bottom: 18px;
+  outline: none;
 }
 
 ::placeholder{
@@ -30,6 +31,4 @@
 
 .button-wrapper {
   position: center;
-  margin-top: 5px;
-  padding-left: 130px;
 }
