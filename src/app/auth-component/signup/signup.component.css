@@ -1,0 +1,35 @@
+
+.input {
+  background : #dbe1e9;
+  border-radius: 7px;
+  border: none;
+  position: relative;
+  font-size: 13px;
+  width : 350px;
+  height: 35px;
+  padding-left: 15px;
+  margin-bottom: 18px;
+}
+
+::placeholder{
+  color:  rgba(28,67,126,0.52);
+}
+
+
+.button_blue {
+  background: #1c437e;
+  width: 100px;
+  height: 30px;
+  border: none;
+  object-fit: contain;
+  color: white;
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;;
+  font-weight: bold;
+}
+
+.button-wrapper {
+  position: center;
+  margin-top: 5px;
+  padding-left: 130px;
+}

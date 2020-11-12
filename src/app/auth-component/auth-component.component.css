@@ -1,0 +1,15 @@
+.float-logo {
+  width: 50%;
+  float: left;
+  padding: 20px;
+  border: 2px solid red;
+}
+
+.float-window {
+  width: 50%;
+  border: 2px solid red;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  alignment: center;
+}
