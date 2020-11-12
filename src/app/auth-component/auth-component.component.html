@@ -10,13 +10,14 @@
         <div class="btn-holder">
 
           <button [style.border-bottom]="selector === 0 ? 'solid 3px #1c437e' : ''"
-                  (click)="loadSignUpComponent()" class="holder btn"> Signup</button>
+                  (click)="loadLogInComponent()" class="holder btn"> Login</button>
 
           <button [style.border-bottom]="selector === 1 ? 'solid 3px #1c437e' : ''"
-                  (click)="loadLogInComponent()" class="holder btn"> Login</button>
+                  (click)="loadSignUpComponent()" class="holder btn"> Signup</button>
+
         </div>
-    <app-signup *ngIf="selector===0"></app-signup>
-      <app-login *ngIf="selector===1"></app-login>
+    <app-signup *ngIf="selector===1"></app-signup>
+      <app-login *ngIf="selector===0"></app-login>
     </div>
   </div>
 

@@ -16,12 +16,12 @@ export class AuthComponentComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   loadSignUpComponent(){
-    this.selector = 0;
+    this.selector = 1;
   }
 
   // tslint:disable-next-line:typedef
   loadLogInComponent(){
-    this.selector = 1;
+    this.selector = 0;
   }
 
 }
