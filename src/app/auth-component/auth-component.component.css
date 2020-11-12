@@ -1,13 +1,7 @@
-.float-logo {
-  width: 50%;
-  float: left;
-  padding: 20px;
-  border: 2px solid red;
-}
 
 .float-window {
   width: 50%;
-  border: 2px solid red;
+  border: none;
   position: relative;
   display: flex;
   text-align: center;
@@ -43,3 +37,43 @@
   border-bottom: 1px solid #dbe1e9;
 }
 
+
+.left {
+  margin: 0 0 0 -15px;
+  height: 100vh;
+  background-color: #1c437e;
+}
+
+.tyro-logo {
+  position: absolute;
+  top: 230px;
+  left: 215px;
+  object-fit: contain;
+}
+
+.tyro {
+  position: absolute;
+  top: 243px;
+  left: 360px;
+  font-family: LucidaGrande;
+  font-size: 80px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: white;
+}
+
+.login {
+  text-align: center;
+}
+
+.head{
+  font-family: OpenSans;
+  font-weight: bold;
+}
+
+.sub-head{
+  font-weight: normal;
+}

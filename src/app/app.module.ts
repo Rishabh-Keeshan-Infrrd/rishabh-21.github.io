@@ -8,11 +8,12 @@ import {AuthComponentComponent} from './auth-component/auth-component.component'
 import {LoginComponent} from './auth-component/login/login.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        SignupComponent,
-        AuthComponentComponent
-    ],
+  declarations: [
+    AppComponent,
+    SignupComponent,
+    AuthComponentComponent,
+    LoginComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule
