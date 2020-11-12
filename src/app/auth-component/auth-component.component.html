@@ -5,8 +5,18 @@
   </div>
 
   <div class="float-window">
-    <div class="child">
-    <app-signup></app-signup>
+
+      <div class="child">
+        <div class="btn-holder">
+
+          <button [style.border-bottom]="selector === 0 ? 'solid 3px #1c437e' : ''"
+                  (click)="loadSignUpComponent()" class="holder btn"> Signup</button>
+
+          <button [style.border-bottom]="selector === 1 ? 'solid 3px #1c437e' : ''"
+                  (click)="loadLogInComponent()" class="holder btn"> Login</button>
+        </div>
+    <app-signup *ngIf="selector===0"></app-signup>
+      <app-login *ngIf="selector===1"></app-login>
     </div>
   </div>
 

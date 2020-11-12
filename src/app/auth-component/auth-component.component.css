@@ -13,7 +13,33 @@
   text-align: center;
 }
 
-.child{
+.child {
   justify-content: center;
-  margin:auto;
+  margin: auto;
 }
+
+.holder {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.btn-holder {
+  margin-top: auto;
+  margin-bottom: 10px;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+
+.btn {
+  background-color: white;
+  color: #1c437e;
+  border: none;
+  font-size: 15px;
+  border-radius: 0;
+  box-shadow: none;
+  height: 50px;
+  border-bottom: 1px solid #dbe1e9;
+}
+

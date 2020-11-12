@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthComponentComponent implements OnInit {
 
+  selector = 0;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  // tslint:disable-next-line:typedef
+  loadSignUpComponent(){
+    this.selector = 0;
+  }
+
+  // tslint:disable-next-line:typedef
+  loadLogInComponent(){
+    this.selector = 1;
   }
 
 }
