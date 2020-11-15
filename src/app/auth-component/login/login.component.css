@@ -25,7 +25,7 @@
   object-fit: contain;
   color: white;
   font-size: 10px;
-  font-family: 'Open Sans', sans-serif;;
+  font-family: OpenSans;
   font-weight: bold;
 }
 
@@ -39,7 +39,7 @@ h6 {
   border-bottom: 1px solid #000;
   line-height: 0.3em;
   margin: auto auto 20px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: OpenSans;
   font-weight: bold;
 }
 
@@ -53,12 +53,12 @@ h6 span{
 }
 
 .google{
-  background-image: url("img/search.svg");
+  background-image: url("src/assets/img/search.svg");
 
 }
 
 .facebook{
-  background-image: url("img/facebook.svg");
+  background-image: url("src/assets/img/facebook.svg");
 
 }
 
@@ -77,4 +77,19 @@ h6 span{
 
 }
 
+.warn-logo{
+  background-image: url(src/assets/img/warningSmall.png);
+  background-repeat: no-repeat;
+  background-size: 13px;
+  background-position: center;
+  position: absolute;
+  padding-top: 12px;
+  right: 95px;
+  width:30px;
+  height:35px;
+}
 
+@font-face {
+  font-family: OpenSans;
+  src: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+}

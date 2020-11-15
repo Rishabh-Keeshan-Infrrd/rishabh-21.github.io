@@ -1,24 +1,32 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import {SignupComponent} from './auth-component/signup/signup.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {SignUpComponent} from './auth-component/signup/signup.component';
 import {AuthComponentComponent} from './auth-component/auth-component.component';
 import {LoginComponent} from './auth-component/login/login.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {TooltipModule} from 'ng2-tooltip-directive';
+import {BloggerModule} from './blogger/blogger.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent,
+    SignUpComponent,
     AuthComponentComponent,
     LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    TooltipModule,
+    BloggerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

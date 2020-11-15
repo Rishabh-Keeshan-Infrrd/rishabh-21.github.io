@@ -1,19 +1,20 @@
 
 .input {
-  background : #dbe1e9;
+  background: #dbe1e9;
+  padding-right: 17px;
   border-radius: 7px;
   border: none;
   position: relative;
   font-size: 13px;
-  width : 350px;
+  width: 350px;
   height: 35px;
   padding-left: 15px;
   margin-bottom: 18px;
   outline: none;
 }
 
-::placeholder{
-  color:  rgba(28,67,126,0.52);
+::placeholder {
+  color: rgba(28, 67, 126, 0.52);
 }
 
 
@@ -25,10 +26,27 @@
   object-fit: contain;
   color: white;
   font-size: 10px;
-  font-family: 'Open Sans', sans-serif;;
+  font-family: OpenSans;
   font-weight: bold;
 }
 
 .button-wrapper {
   position: center;
+}
+
+.warn-logo{
+  background-image: url(src/assets/img/warningSmall.png);
+  background-repeat: no-repeat;
+  background-size: 13px;
+  background-position: center;
+  position: absolute;
+  padding-top: 12px;
+  right: 95px;
+  width:30px;
+  height:35px;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 }

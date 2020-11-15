@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-auth-component',
@@ -9,10 +10,10 @@ export class AuthComponentComponent implements OnInit {
 
   selector = 0;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
   }
+
+  ngOnInit(): void {}
 
   // tslint:disable-next-line:typedef
   loadSignUpComponent(){

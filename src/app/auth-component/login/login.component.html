@@ -1,17 +1,27 @@
 <div>
-  <input type="text" class="input" id="email" placeholder="EMAIL">
-  <br>
-  <input type="password" class="input" id="password" placeholder="PASSWORD">
+
+  <form [formGroup]="login">
+    <input type="email" class="input" formControlName="email" placeholder="EMAIL">
+    <span class="warn-logo "
+          *ngIf="!login.get('email').valid && login.get('email').touched"
+          tooltip="Email not valid" placement="bottom" ></span>
+    <br>
+    <input type="password" class="input" formControlName="password" placeholder="PASSWORD">
+    <span class="warn-logo "
+          *ngIf="!login.get('password').valid && login.get('password').touched"
+          tooltip="password" placement="bottom" ></span>
+  </form>
+
 </div>
 
 <div class="button-wrapper">
-  <input type="button" class="button_blue" value="LOGIN">
+  <input type="button" class="button_blue" [disabled]="login.invalid" value="LOGIN">
 </div>
 
 <div class="txt-container">
 
   <br>
-  <h6><span>OR </span></h6>
+  <h6><span>OR</span></h6>
 
 
   <button class="google button"></button>

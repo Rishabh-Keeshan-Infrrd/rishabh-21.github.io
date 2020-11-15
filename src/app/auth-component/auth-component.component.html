@@ -1,46 +1,42 @@
-<div class="container-fluid">
-  <div class="row">
-    <div style="background-color:#1c437e;height:100vh" class="col-md-7">
-      <div class="left">
-        <div class="tyro-logo">
-          <img src="/img/tyro-logo.png" alt="" class="fluid-img" height="119px" width="139px">
-        </div>
-        <div class="tyro">
-          <p>tyro</p>
-
-
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-5 float-window">
-      <div class="child">
-
-        <div class="head">
-          <h2>A medium clone</h2>
-          <div class="sub-head">
-            <p>Who says training projects don’t have to look pretty?</p>
+<div class="parent">
+  <div class="container-fluid">
+    <div class="row">
+      <div style="background-color:#1c437e;height:100vh" class="col-md-7">
+        <div class="left">
+          <div class="tyro-logo">
+            <img src="src/assets/img/brand-logo-light.svg" alt="" class="fluid-img" height="119" width="139">
+          </div>
+          <div class="tyro">
+            <p>tyro</p>
           </div>
         </div>
+      </div>
 
-        <div class="btn-holder">
+      <div class="col-md-5 float-window">
+        <div class="child">
 
-          <button [style.border-bottom]="selector === 0 ? 'solid 3px #1c437e' : ''"
-                  (click)="loadLogInComponent()" class="holder btn"> Login
-          </button>
+          <div class="head">
+            <h2>A medium clone</h2>
+            <div class="sub-head">
+              <p>Who says training projects don’t have to look pretty?</p>
+            </div>
+          </div>
 
-          <button [style.border-bottom]="selector === 1 ? 'solid 3px #1c437e' : ''"
-                  (click)="loadSignUpComponent()" class="holder btn"> Signup
-          </button>
+          <div class="btn-holder">
 
+            <button [style.border-bottom]="selector === 0 ? 'solid 3px #1c437e' : ''"
+                    (click)="loadLogInComponent()" class="holder btn"> Login
+            </button>
+
+            <button [style.border-bottom]="selector === 1 ? 'solid 3px #1c437e' : ''"
+                    (click)="loadSignUpComponent()" class="holder btn"> Signup
+            </button>
+
+          </div>
+          <app-signup *ngIf="selector===1"></app-signup>
+          <app-login *ngIf="selector===0"></app-login>
         </div>
-        <app-signup *ngIf="selector===1"></app-signup>
-        <app-login *ngIf="selector===0"></app-login>
       </div>
     </div>
   </div>
-
-
 </div>
-
-

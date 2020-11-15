@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tyro';
+
+  tooltipOptions = {
+    'show-delay': '500',
+    'tooltip-class': 'new-tooltip-class'
+  };
 }
