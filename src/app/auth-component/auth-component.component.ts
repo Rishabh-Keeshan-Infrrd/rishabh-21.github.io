@@ -10,10 +10,12 @@ export class AuthComponentComponent implements OnInit {
 
   selector = 0;
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.route.queryParams.subscribe();
+  }
 
   // tslint:disable-next-line:typedef
   loadSignUpComponent(){
