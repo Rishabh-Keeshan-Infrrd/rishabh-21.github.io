@@ -7,7 +7,7 @@
           tooltip="Email not valid" placement="bottom" ></span>
     <br>
     <input type="password" class="input" formControlName="password" placeholder="PASSWORD">
-    <span class="warn-logo "
+    <span class="warn-logo"
           *ngIf="!login.get('password').valid && login.get('password').touched"
           tooltip="password" placement="bottom" ></span>
   </form>
@@ -15,7 +15,7 @@
 </div>
 
 <div class="button-wrapper">
-  <input type="button" class="button_blue" [disabled]="login.invalid" value="LOGIN">
+  <input type="button" class="button_blue" [disabled]="login.invalid" value="LOGIN" (click)="onSubmit()">
 </div>
 
 <div class="txt-container">

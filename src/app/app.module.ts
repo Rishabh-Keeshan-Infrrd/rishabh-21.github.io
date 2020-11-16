@@ -9,6 +9,7 @@ import {LoginComponent} from './auth-component/login/login.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {TooltipModule} from 'ng2-tooltip-directive';
 import {BloggerModule} from './blogger/blogger.module';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {BloggerModule} from './blogger/blogger.module';
     AppRoutingModule,
     ReactiveFormsModule,
     TooltipModule,
-    BloggerModule
+    BloggerModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
