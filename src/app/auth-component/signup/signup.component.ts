@@ -3,8 +3,6 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {AuthenticationService} from '../../shared/services/auth/auth.service';
 import {Router} from '@angular/router';
 import {Subscription} from 'rxjs';
-import {delay} from 'rxjs/operators';
-import {AuthResponseModel} from '../../shared/models/AuthResponse.model';
 
 @Component({
   selector: 'app-signup',

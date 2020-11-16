@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import {BehaviorSubject, observable, Observable} from 'rxjs';
+import {Injectable} from '@angular/core';
+import {BehaviorSubject, Observable} from 'rxjs';
 import {User} from '../../models/user.model';
 import {HttpClient} from '@angular/common/http';
-import {delay, map} from 'rxjs/operators';
+import {map} from 'rxjs/operators';
 import {environment} from '../../../../environments/environment';
 import {AuthResponseModel} from '../../models/AuthResponse.model';
 

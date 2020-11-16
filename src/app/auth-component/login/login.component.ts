@@ -1,9 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AuthenticationService} from '../../shared/services/auth/auth.service';
-import {Observable, Subscription} from 'rxjs';
+import {Subscription} from 'rxjs';
 import {Router} from '@angular/router';
-import {HttpResponse} from '@angular/common/http';
 import {AuthResponseModel} from '../../shared/models/AuthResponse.model';
 
 class AuthResponse {
