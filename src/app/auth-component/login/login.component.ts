@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AuthenticationService} from '../../shared/services/auth/auth.service';
-import {Subscription} from 'rxjs';
 import {Router} from '@angular/router';
-import {AuthResponseModel} from '../../shared/models/AuthResponse.model';
+import {AuthResponseModel} from '../../shared/models/auth-response.model';
+import {Subscription} from 'rxjs';
+import {delay} from 'rxjs/operators';
 
 class AuthResponse {
 }
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   user: Subscription;
   login: FormGroup;
-  loginStatus: AuthResponseModel;
+  loginStatus: AuthResponseModel = new AuthResponseModel();
 
   constructor(private fb: FormBuilder, private authenticationService: AuthenticationService,
               private router: Router) {
@@ -32,16 +33,19 @@ export class LoginComponent implements OnInit {
 
   }
 
-  onSubmit(): void {
+   onSubmit(): void {
     this.user = this.authenticationService.login(this.login.get('email').value, this.login.get('password').value)
-      .subscribe(status => this.loginStatus = status);
-    if (this.loginStatus.message.toString() === 'Login successful') {
-      this.router.navigate(['./dashboard']);
-    } else {
-      alert('Invalid Login');
-      this.login.reset();
-      this.user.unsubscribe();
-      this.router.navigate(['/auth']);
-    }
+      .subscribe(random => {
+        console.log(random.message);
+        if (random.message.endsWith('Login Successful')) {
+          console.log(random.message);
+          this.router.navigate(['./dashboard']);
+        } else {
+          alert('Invalid Login \n' + random.message);
+          this.login.reset();
+          this.user.unsubscribe();
+          this.router.navigate(['/auth']);
+        }
+      } );
   }
 }

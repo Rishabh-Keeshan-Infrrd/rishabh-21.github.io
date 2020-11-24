@@ -8,11 +8,11 @@ import {
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class HttptestInterceptor implements HttpInterceptor {
+export class BasicInterceptorInterceptor implements HttpInterceptor {
 
   constructor() {}
 
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next.handle(request);
   }
 }

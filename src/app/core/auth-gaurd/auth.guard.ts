@@ -6,6 +6,7 @@ import {
   Router
 } from '@angular/router';
 import {AuthenticationService} from '../../shared/services/auth/auth.service';
+import {User} from '../../shared/models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -19,12 +20,12 @@ export class AuthGuard implements CanActivate {
 
   // tslint:disable-next-line:typedef
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    const currentUser = this.authenticationService.currentUserValue;
-    if (currentUser) {
-      this.router.navigate(['/dashboard'], { queryParams: { returnUrl: state.url } });
+    const currentUser: User = this.authenticationService.currentUserValue;
+    if (currentUser.email != null) {
+      this.router.navigate(['./dashboard']);
       return true;
     }
-    this.router.navigate(['/auth'], {queryParams: {returnUrl: state.url}});
+    this.router.navigate(['./auth']);
     return false;
   }
 

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,8 +8,10 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
 }

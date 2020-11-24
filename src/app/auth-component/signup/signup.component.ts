@@ -3,6 +3,8 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {AuthenticationService} from '../../shared/services/auth/auth.service';
 import {Router} from '@angular/router';
 import {Subscription} from 'rxjs';
+import {delay} from 'rxjs/operators';
+import {AuthResponseModel} from '../../shared/models/auth-response.model';
 
 @Component({
   selector: 'app-signup',
@@ -12,8 +14,7 @@ import {Subscription} from 'rxjs';
 export class SignUpComponent implements OnInit {
 
   signUp: FormGroup;
-  user: Subscription;
-  signupStatus: {status: boolean};
+  user;
 
   constructor(private authenticationService: AuthenticationService,
               private router: Router) {
@@ -29,15 +30,17 @@ export class SignUpComponent implements OnInit {
 
   onSubmit(): void{
     this.user = this.authenticationService.signup(this.signUp.get('name').value,
-      this.signUp.get('email').value, this.signUp.get('password').value).subscribe(status => this.signupStatus = status);
-    if (this.signupStatus.status === true) {
-      this.router.navigate(['./dashboard']);
-    } else {
-      alert('Signup Failed');
-      this.user.unsubscribe();
-      this.signUp.reset();
-      this.router.navigate(['/auth']);
-    }
+      this.signUp.get('email').value, this.signUp.get('password').value).subscribe(random =>
+    { console.log(random);
+      if (!random.message.endsWith('Sign-Up Successful')) {
+        alert('Signup Failed \n ' + random.status);
+        this.user.unsubscribe();
+        this.signUp.reset();
+      }else{
+        alert('Signup Success \n ' + random.status);
+      }
+      location.reload();
+    });
   }
 
 }

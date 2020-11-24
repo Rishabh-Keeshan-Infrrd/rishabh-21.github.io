@@ -13,7 +13,7 @@
     <div class="button-holder">
       <button class="notification"></button>
       <button class="bookmark"></button>
-      <button class="new-post">NEW POST</button>
+      <button class="new-post" (click)="onClick( $event.target )">{{buttonString}}</button>
       <button class="profile"></button>
     </div>
   </div>
