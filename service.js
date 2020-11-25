@@ -16,14 +16,14 @@ const forceSSL = function() {
 };
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/docs/tyro'));
+app.use(express.static(__dirname + '/dist/tyro'));
 
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/docs/tyro/index.html'));
+  res.sendFile(path.join(__dirname + '/dist/tyro/index.html'));
 });
 
 app.get('/assets', function(req, res) {
-  res.sendFile(path.join(__dirname + '/docs/tyro/assets'));
+  res.sendFile(path.join(__dirname + '/dist/tyro/assets'));
 });
 
 
